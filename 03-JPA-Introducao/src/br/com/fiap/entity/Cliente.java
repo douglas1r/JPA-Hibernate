@@ -46,7 +46,7 @@ public class Cliente {
 	
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="dt_cadastro", updatable = false, nullable = false)
+	@Column(name="dt_cadastro", updatable = false, nullable = true)
 	private Calendar dataCadastro;
 	
 	@Lob
@@ -131,11 +131,11 @@ public class Cliente {
 		this.numeroCartao = numeroCartao;
 	}
 
-	protected Cliente() {
+	public Cliente() {
 		super();
 	}
 
-	protected Cliente(String nome, Calendar dataNascimento, String cpf, Genero genero, byte[] foto, boolean vip) {
+	public Cliente(String nome, Calendar dataNascimento, String cpf, Genero genero, byte[] foto, boolean vip) {
 		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
@@ -144,6 +144,20 @@ public class Cliente {
 		this.foto = foto;
 		this.vip = vip;
 	}
+
+	public Cliente(int codigo, String nome, Calendar dataNascimento, String cpf, Genero genero, byte[] foto,
+			boolean vip) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.cpf = cpf;
+		this.genero = genero;
+		this.foto = foto;
+		this.vip = vip;
+	}
+	
+	
 	
 
 
