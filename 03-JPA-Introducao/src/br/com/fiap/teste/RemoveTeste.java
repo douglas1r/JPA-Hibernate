@@ -14,7 +14,7 @@ public class RemoveTeste {
 		EntityManager em = fabrica.createEntityManager();
 		
 		//Remover o cliente o id 1
-		Cliente cliente = em.find(Cliente.class, 4);
+		Cliente cliente = em.find(Cliente.class, 1);
 		em.remove(cliente);
 		
 		
